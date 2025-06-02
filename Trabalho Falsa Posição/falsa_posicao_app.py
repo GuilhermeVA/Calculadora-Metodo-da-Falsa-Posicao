@@ -55,7 +55,7 @@ A função deve ser em termos de **x**.
 Exemplos válidos:
 - `x**3 - 9*x + 3`
 - `cos(x) - x`
-- `x**2 - lnx`
+- `x**2 + ln(x)`
 - `x**2 - 4`
 """)
 
