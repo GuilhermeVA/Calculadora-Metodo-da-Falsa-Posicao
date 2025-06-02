@@ -1,4 +1,5 @@
 import streamlit as st
+from sympy import sin, cos, tan, log, ln, exp
 from sympy import symbols, sympify, lambdify
 
 # python -m streamlit run falsa_posicao_app.py
@@ -6,7 +7,7 @@ from sympy import symbols, sympify, lambdify
 
 def falsa_posicao(f, a, b, error, max_iter=100):
     x = symbols('x')
-    f_expr = sympify(f)
+    f_expr = sympify(f, locals={"sin": sin, "cos": cos, "tan": tan, "log": log, "ln": log, "exp": exp})
     f_lamb = lambdify(x,f_expr)
 
     if f_lamb(a) * f_lamb(b) >= 0:
@@ -54,6 +55,7 @@ A função deve ser em termos de **x**.
 Exemplos válidos:
 - `x**3 - 9*x + 3`
 - `cos(x) - x`
+- `x**2 - lnx`
 - `x**2 - 4`
 """)
 
