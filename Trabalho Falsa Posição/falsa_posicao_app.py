@@ -42,8 +42,6 @@ def falsa_posicao(f, a, b, error, max_iter=100):
     return xr, steps
 
 
-print(falsa_posicao("x**3 - 9*x + 3", 0, 1, 0.01))
-
 
 #Interface
 st.set_page_config(page_title="Método da Falsa Posição", layout="centered")
